@@ -1,0 +1,22 @@
+@media print {
+  *:not(body) {
+    color-adjust:exact !important;
+    -webkit-print-color-adjust: exact !important;
+    -webkit-transition: none !important;
+    transition: none !important;
+  }
+  .absolute-print { position: absolute !important; }
+  .hide-print { display: none; }
+  .overflow-auto { overflow: visible !important; }
+  .bg-midgray { background-color: transparent !important; }
+}
+
+.visible-ie { visibility: hidden;  }
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .visible-ie { visibility: visible !important; }
+}
+
+@supports (-ms-accelerator:true) {
+  .visible-ie { visibility: visible !important; }
+}
